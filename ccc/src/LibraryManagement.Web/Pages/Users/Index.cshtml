@@ -1,0 +1,169 @@
+@page
+
+@model LibraryManagement.Web.Pages.Users.IndexModel
+
+@{
+
+    ViewData["Title"] = "Kullanıcılar";
+
+}
+
+
+
+<h2>Kullanıcılar</h2>
+
+
+
+<form method="post" asp-page-handler="Add" class="row g-2 mb-4">
+
+    <div class="col-md-3"><input asp-for="FullName" class="form-control" placeholder="Ad Soyad" required /></div>
+
+    <div class="col-md-3"><input asp-for="Email" class="form-control" placeholder="E-posta" required /></div>
+
+    <div class="col-md-2"><input asp-for="PhoneNumber" class="form-control" placeholder="05XXXXXXXXX" maxlength="11" pattern="05[0-9]{9}" title="05 ile başlayan 11 rakam" required /></div>
+
+    <div class="col-md-2"><button type="submit" class="btn btn-primary">Ekle</button></div>
+
+</form>
+
+
+
+<table class="table table-striped">
+
+    <thead><tr><th>Ad Soyad</th><th>E-posta</th><th>Telefon</th><th>Kayıt Tarihi</th><th>İşlem</th></tr></thead>
+
+    <tbody>
+
+    @foreach (var user in Model.Users)
+
+    {
+
+        <tr>
+
+            <td>@user.FullName</td>
+
+            <td>@user.Email</td>
+
+            <td>@user.PhoneNumber</td>
+
+            <td>@user.CreatedAt.ToLocalTime().ToString("dd.MM.yyyy")</td>
+
+            <td>
+
+                <button type="button" class="btn btn-sm btn-secondary edit-user-btn"
+
+                        data-id="@user.Id"
+
+                        data-name="@user.FullName"
+
+                        data-email="@user.Email"
+
+                        data-phone="@user.PhoneNumber">
+
+                    Düzenle
+
+                </button>
+
+            </td>
+
+        </tr>
+
+    }
+
+    </tbody>
+
+</table>
+
+
+
+<div class="modal fade" id="editUserModal" tabindex="-1">
+
+    <div class="modal-dialog">
+
+        <div class="modal-content">
+
+            <form method="post" asp-page-handler="Edit">
+
+                <div class="modal-header">
+
+                    <h5 class="modal-title">Kullanıcı Düzenle</h5>
+
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+
+                </div>
+
+                <div class="modal-body">
+
+                    <input type="hidden" asp-for="EditId" id="editUserId" />
+
+                    <div class="mb-3">
+
+                        <label class="form-label">Ad Soyad</label>
+
+                        <input asp-for="FullName" class="form-control" id="editUserName" required />
+
+                    </div>
+
+                    <div class="mb-3">
+
+                        <label class="form-label">E-posta</label>
+
+                        <input asp-for="Email" class="form-control" id="editUserEmail" required />
+
+                    </div>
+
+                    <div class="mb-3">
+
+                        <label class="form-label">Telefon</label>
+
+                        <input asp-for="PhoneNumber" class="form-control" id="editUserPhone" maxlength="11" pattern="05[0-9]{9}" placeholder="05XXXXXXXXX" required />
+
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">İptal</button>
+
+                    <button type="submit" class="btn btn-primary">Kaydet</button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+@section Scripts {
+
+<script>
+
+    document.querySelectorAll('.edit-user-btn').forEach(btn => {
+
+        btn.addEventListener('click', () => {
+
+            document.getElementById('editUserId').value = btn.dataset.id;
+
+            document.getElementById('editUserName').value = btn.dataset.name;
+
+            document.getElementById('editUserEmail').value = btn.dataset.email;
+
+            document.getElementById('editUserPhone').value = btn.dataset.phone;
+
+            new bootstrap.Modal(document.getElementById('editUserModal')).show();
+
+        });
+
+    });
+
+</script>
+
+}
+
+

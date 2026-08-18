@@ -1,0 +1,59 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Ana Sayfa";
+}
+
+<h1 class="mb-4">Kütüphane Yönetim Sistemi</h1>
+
+<div class="row g-3 mb-4">
+    <div class="col-md-3"><div class="card text-center"><div class="card-body"><h3>@Model.Stats.UserCount</h3><p class="mb-0">Kullanıcı</p></div></div></div>
+    <div class="col-md-3"><div class="card text-center"><div class="card-body"><h3>@Model.Stats.BookCount</h3><p class="mb-0">Kitap Türü</p></div></div></div>
+    <div class="col-md-3"><div class="card text-center"><div class="card-body"><h3>@Model.Stats.ActiveLoanCount</h3><p class="mb-0">Aktif Ödünç</p></div></div></div>
+    <div class="col-md-3"><div class="card text-center border-danger"><div class="card-body"><h3 class="text-danger">@Model.Stats.OverdueCount</h3><p class="mb-0">Geciken</p></div></div></div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <h4>En Çok Okunan Kitaplar</h4>
+        <table class="table table-sm table-striped">
+            <thead><tr><th>Kitap</th><th>Yazar</th><th>Sayı</th></tr></thead>
+            <tbody>
+            @foreach (var book in Model.Stats.MostBorrowedBooks)
+            {
+                <tr><td>@book.Title</td><td>@book.Author</td><td>@book.BorrowCount</td></tr>
+            }
+            </tbody>
+        </table>
+    </div>
+    <div class="col-md-6">
+        <h4>En Aktif Kullanıcılar</h4>
+        <table class="table table-sm table-striped">
+            <thead><tr><th>Ad Soyad</th><th>Ödünç</th></tr></thead>
+            <tbody>
+            @foreach (var user in Model.Stats.MostActiveUsers)
+            {
+                <tr><td>@user.FullName</td><td>@user.BorrowCount</td></tr>
+            }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@if (Model.OverdueLoans.Count > 0)
+{
+    <h4 class="mt-4 text-danger">Geciken İadeler</h4>
+    <table class="table table-sm">
+        <thead><tr><th>Kullanıcı</th><th>Kitap</th><th>Son İade</th></tr></thead>
+        <tbody>
+        @foreach (var record in Model.OverdueLoans)
+        {
+            <tr>
+                <td>@record.User.FullName</td>
+                <td>@record.Book.Title</td>
+                <td>@record.Loan.DueDate.ToLocalTime().ToString("dd.MM.yyyy")</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}

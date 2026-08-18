@@ -1,0 +1,117 @@
+@page
+
+@model LibraryManagement.Web.Pages.Reservations.IndexModel
+
+@using LibraryManagement.Models
+
+@{
+
+    ViewData["Title"] = "Rezervasyon";
+
+}
+
+
+
+<h2>Rezervasyon</h2>
+
+<p class="text-muted">Kitap müsait değilken sıraya girilir. İade edilince sıradaki kişiye "Hazır" bildirimi verilir.</p>
+
+
+
+<form method="post" asp-page-handler="Add" class="row g-2 mb-4">
+
+    <div class="col-md-4">
+
+        <select asp-for="UserId" asp-items="Model.Users" class="form-select" required>
+
+            <option value="">Kullanıcı seçin</option>
+
+        </select>
+
+    </div>
+
+    <div class="col-md-4">
+
+        <select asp-for="BookId" asp-items="Model.UnavailableBooks" class="form-select" required>
+
+            <option value="">Ödünçteki kitap seçin</option>
+
+        </select>
+
+    </div>
+
+    <div class="col-md-2"><button type="submit" class="btn btn-primary">Rezervasyon Yap</button></div>
+
+</form>
+
+
+
+<table class="table table-striped">
+
+    <thead><tr><th>Kullanıcı</th><th>Kitap</th><th>Tarih</th><th>Sıra</th><th>Durum</th><th></th></tr></thead>
+
+    <tbody>
+
+    @foreach (var record in Model.Reservations)
+
+    {
+
+        var queueText = record.Reservation.Status == ReservationStatus.Ready
+
+            ? "—"
+
+            : record.QueuePosition.ToString();
+
+        var rowClass = record.Reservation.Status == ReservationStatus.Ready ? "table-success" : "";
+
+        <tr class="@rowClass">
+
+            <td>@record.Reservation.UserFullName</td>
+
+            <td>@record.Book.Title</td>
+
+            <td>@record.Reservation.ReservedAt.ToLocalTime().ToString("dd.MM.yyyy")</td>
+
+            <td>@queueText</td>
+
+            <td>
+
+                @if (record.Reservation.Status == ReservationStatus.Ready)
+
+                {
+
+                    <span class="badge bg-success">Hazır - ödünç alabilir</span>
+
+                }
+
+                else
+
+                {
+
+                    <span class="badge bg-secondary">@record.Reservation.Status</span>
+
+                }
+
+            </td>
+
+            <td>
+
+                <form method="post" asp-page-handler="Cancel" class="d-inline">
+
+                    <input type="hidden" name="id" value="@record.Reservation.Id" />
+
+                    <button type="submit" class="btn btn-sm btn-warning">İptal</button>
+
+                </form>
+
+            </td>
+
+        </tr>
+
+    }
+
+    </tbody>
+
+</table>
+
+

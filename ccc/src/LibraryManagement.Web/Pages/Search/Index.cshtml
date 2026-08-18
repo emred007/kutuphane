@@ -1,0 +1,83 @@
+@page
+@model LibraryManagement.Web.Pages.Search.IndexModel
+@{
+    ViewData["Title"] = "Arama";
+}
+
+<h2>Arama</h2>
+
+<form method="get" class="row g-2 mb-4">
+    <div class="col-md-2">
+        <select asp-for="Type" class="form-select">
+            <option value="user">Kullanıcı</option>
+            <option value="book">Kitap</option>
+        </select>
+    </div>
+    <div class="col-md-6"><input asp-for="Query" class="form-control" placeholder="Aranacak kelime" /></div>
+    <div class="col-md-2"><button type="submit" class="btn btn-primary">Ara</button></div>
+</form>
+
+@if (Model.Type == "book")
+{
+    <table class="table table-striped">
+        <thead><tr><th>Başlık</th><th>Yazar</th><th>ISBN</th><th>Müsait/Toplam</th></tr></thead>
+        <tbody>
+        @foreach (var book in Model.Books)
+        {
+            <tr><td>@book.Title</td><td>@book.Author</td><td>@book.Isbn</td><td>@book.AvailableCopies/@book.TotalCopies</td></tr>
+        }
+        </tbody>
+    </table>
+}
+else if (!string.IsNullOrWhiteSpace(Model.Query))
+{
+    <p class="text-muted">Kullanıcıya tıklayın — aktif ödünç kitapları görüntülenir.</p>
+    <table class="table table-striped">
+        <thead><tr><th>Ad Soyad</th><th>E-posta</th><th>Telefon</th></tr></thead>
+        <tbody>
+        @foreach (var user in Model.Users)
+        {
+            var isSelected = Model.UserId == user.Id;
+            <tr class="@(isSelected ? "table-primary" : "")" style="cursor:pointer"
+                onclick="location.href='?Type=user&Query=@Uri.EscapeDataString(Model.Query)&UserId=@user.Id'">
+                <td>@user.FullName</td>
+                <td>@user.Email</td>
+                <td>@user.PhoneNumber</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+
+    @if (Model.SelectedUser is not null)
+    {
+        <div class="card mt-3">
+            <div class="card-header">
+                <strong>@Model.SelectedUser.FullName</strong> — aktif ödünç kitaplar
+            </div>
+            <div class="card-body p-0">
+                @if (Model.SelectedUserActiveLoans.Count == 0)
+                {
+                    <p class="p-3 mb-0 text-muted">Aktif ödünç kitap yok.</p>
+                }
+                else
+                {
+                    <table class="table table-sm mb-0">
+                        <thead><tr><th>Kitap</th><th>Yazar</th><th>Alınma</th><th>Son İade</th><th>Durum</th></tr></thead>
+                        <tbody>
+                        @foreach (var record in Model.SelectedUserActiveLoans)
+                        {
+                            <tr class="@(record.Loan.IsOverdue ? "table-danger" : "")">
+                                <td>@record.Book.Title</td>
+                                <td>@record.Book.Author</td>
+                                <td>@record.Loan.BorrowedAt.ToLocalTime().ToString("dd.MM.yyyy")</td>
+                                <td>@record.Loan.DueDate.ToLocalTime().ToString("dd.MM.yyyy")</td>
+                                <td>@(record.Loan.IsOverdue ? "Gecikmiş" : "Aktif")</td>
+                            </tr>
+                        }
+                        </tbody>
+                    </table>
+                }
+            </div>
+        </div>
+    }
+}

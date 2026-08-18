@@ -1,0 +1,484 @@
+{
+  "Kullanicilar": [
+    {
+      "Id": "a1111111-1111-1111-1111-111111111104",
+      "AdSoyad": "Ali \u00C7elik",
+      "Eposta": "ali@example.com",
+      "Telefon": "05354440004",
+      "KayitTarihi": "2026-01-15T14:20:00Z"
+    },
+    {
+      "Id": "cc038c67-9ed3-4636-80f2-d3a8615901ea",
+      "AdSoyad": "Ay\u015Fe Y\u0131lmaz",
+      "Eposta": "ay\u015Fe1@gmail.com",
+      "Telefon": "05336548975",
+      "KayitTarihi": "2026-06-14T00:43:47.1988128Z"
+    },
+    {
+      "Id": "a1111111-1111-1111-1111-111111111101",
+      "AdSoyad": "Ay\u015Fe Y\u0131lmaz",
+      "Eposta": "ayse2@example.com",
+      "Telefon": "05321110001",
+      "KayitTarihi": "2026-01-10T10:00:00Z"
+    },
+    {
+      "Id": "7a05db2a-81f1-4d1f-af1d-08b4a7ef488b",
+      "AdSoyad": "Emre Duman",
+      "Eposta": "emre@gmail.com",
+      "Telefon": "05376664446",
+      "KayitTarihi": "2026-06-14T00:22:41.9617255Z"
+    },
+    {
+      "Id": "a1111111-1111-1111-1111-111111111105",
+      "AdSoyad": "Fatma \u00D6zt\u00FCrk",
+      "Eposta": "fatma1@example.com",
+      "Telefon": "05365550005",
+      "KayitTarihi": "2026-02-01T11:00:00Z"
+    },
+    {
+      "Id": "a1111111-1111-1111-1111-111111111102",
+      "AdSoyad": "Mehmet Demir",
+      "Eposta": "mehmet@example.com",
+      "Telefon": "05332220002",
+      "KayitTarihi": "2026-01-10T10:05:00Z"
+    },
+    {
+      "Id": "785ce2e3-3ade-4b0e-a600-75b24398634f",
+      "AdSoyad": "Mustafa Gizey",
+      "Eposta": "Mustafa@gmail.com",
+      "Telefon": "05855654656",
+      "KayitTarihi": "2026-06-14T01:41:28.1399779Z"
+    },
+    {
+      "Id": "2c889256-084c-464d-a7c1-2c844f7a5e4b",
+      "AdSoyad": "Or\u00E7un \u015Eanl\u0131",
+      "Eposta": "or\u00E7un@gmail.com",
+      "Telefon": "05483515555",
+      "KayitTarihi": "2026-06-14T01:41:56.7728027Z"
+    },
+    {
+      "Id": "1f5f9b5f-e578-48fb-b34e-60e8650b41cf",
+      "AdSoyad": "Senkron Test",
+      "Eposta": "senkron1478539208@test.com",
+      "Telefon": "05554417976",
+      "KayitTarihi": "2026-06-14T01:47:16.8921Z"
+    },
+    {
+      "Id": "a1111111-1111-1111-1111-111111111103",
+      "AdSoyad": "Zeynep Kaya",
+      "Eposta": "zeynep@example.com",
+      "Telefon": "05343330003",
+      "KayitTarihi": "2026-01-12T09:30:00Z"
+    },
+    {
+      "Id": "a3c44e3b-496e-4901-a0e0-d66c488d579d",
+      "AdSoyad": "islam sui\u00E7mez1",
+      "Eposta": "islam@gmail.com",
+      "Telefon": "05465432231",
+      "KayitTarihi": "2026-06-24T21:31:03.8755116Z"
+    },
+    {
+      "Id": "57ca992a-c6f9-480e-af03-de90fb43bbbd",
+      "AdSoyad": "kerem ko\u00E7",
+      "Eposta": "kerem@gmail.com",
+      "Telefon": "05321110002",
+      "KayitTarihi": "2026-06-14T01:04:50.9476885Z"
+    },
+    {
+      "Id": "7685d6c1-daf5-40be-ace1-875a5c3c161a",
+      "AdSoyad": "osman \u00E7elik",
+      "Eposta": "osman@gmail.com",
+      "Telefon": "05465446453",
+      "KayitTarihi": "2026-06-24T21:46:53.3921945Z"
+    },
+    {
+      "Id": "57ddff6f-9e90-400a-9b8b-1429b1797ba0",
+      "AdSoyad": "vehbi ko\u00E7",
+      "Eposta": "vehbi@gmail.com",
+      "Telefon": "05336548974",
+      "KayitTarihi": "2026-06-24T21:34:48.6151829Z"
+    },
+    {
+      "Id": "4584e181-41fa-4ac2-a124-986094c7b77b",
+      "AdSoyad": "\u00E7a\u011Fr\u0131 ero\u011Flu",
+      "Eposta": "\u00E7a\u011Fr\u0131@example.com",
+      "Telefon": "05365444005",
+      "KayitTarihi": "2026-06-24T20:31:28.5134107Z"
+    }
+  ],
+  "Kitaplar": [
+    {
+      "Id": "b2222222-2222-2222-2222-222222222205",
+      "Baslik": "1984",
+      "Yazar": "George Orwell",
+      "Isbn": "978-975-08-0005",
+      "ToplamKopya": 10,
+      "MusaitKopya": 10,
+      "MusaitMi": true
+    },
+    {
+      "Id": "d7ee8811-5aa9-4b22-9349-51c3c22d91fd",
+      "Baslik": "Anna Karenina",
+      "Yazar": "Lev Tolstoy",
+      "Isbn": "978-975-08-0010",
+      "ToplamKopya": 11,
+      "MusaitKopya": 11,
+      "MusaitMi": true
+    },
+    {
+      "Id": "5e1208cb-c612-45d5-acef-2c5d234232cd",
+      "Baslik": "B\u00FClb\u00FCl\u00FC \u00D6ld\u00FCrmek",
+      "Yazar": "Harper Lee",
+      "Isbn": "978-975-08-0015",
+      "ToplamKopya": 3,
+      "MusaitKopya": 3,
+      "MusaitMi": true
+    },
+    {
+      "Id": "86756c65-e96b-49d0-b3ed-64c68516f1a4",
+      "Baslik": "Don Ki\u015Fot",
+      "Yazar": "Miguel de Cervantes",
+      "Isbn": "978-975-08-0009",
+      "ToplamKopya": 2,
+      "MusaitKopya": 2,
+      "MusaitMi": true
+    },
+    {
+      "Id": "faeb480f-f568-4a90-904a-8b2ea2facea0",
+      "Baslik": "D\u00F6n\u00FC\u015F\u00FCm",
+      "Yazar": "Franz Kafka",
+      "Isbn": "978-975-08-0018",
+      "ToplamKopya": 3,
+      "MusaitKopya": 3,
+      "MusaitMi": true
+    },
+    {
+      "Id": "06ececcc-3673-48da-a565-2ea117ff1834",
+      "Baslik": "G\u00FCr\u00FClt\u00FC ve \u00D6fke",
+      "Yazar": "William Faulkner",
+      "Isbn": "978-975-08-0017",
+      "ToplamKopya": 1,
+      "MusaitKopya": 1,
+      "MusaitMi": true
+    },
+    {
+      "Id": "b2222222-2222-2222-2222-222222222204",
+      "Baslik": "Kar",
+      "Yazar": "Orhan Pamuk",
+      "Isbn": "978-975-08-0004",
+      "ToplamKopya": 1,
+      "MusaitKopya": 1,
+      "MusaitMi": true
+    },
+    {
+      "Id": "b2222222-2222-2222-2222-222222222206",
+      "Baslik": "K\u00FC\u00E7\u00FCk Prens",
+      "Yazar": "Antoine de Saint-Exup\u00E9ry",
+      "Isbn": "978-975-08-0006",
+      "ToplamKopya": 1,
+      "MusaitKopya": 1,
+      "MusaitMi": true
+    },
+    {
+      "Id": "5eb1eb2a-c42e-47ce-8538-c66e14a45e31",
+      "Baslik": "Madame Bovary",
+      "Yazar": "Gustave Flaubert",
+      "Isbn": "978-975-08-0012",
+      "ToplamKopya": 2,
+      "MusaitKopya": 2,
+      "MusaitMi": true
+    },
+    {
+      "Id": "066a9878-d6a8-4070-b54f-2ba5634b67d0",
+      "Baslik": "Moby Dick",
+      "Yazar": "Herman Melville",
+      "Isbn": "978-975-08-0014",
+      "ToplamKopya": 2,
+      "MusaitKopya": 2,
+      "MusaitMi": true
+    },
+    {
+      "Id": "e5c04dec-412a-4b54-909c-3ee9d0577e56",
+      "Baslik": "Monte Cristo Kontu",
+      "Yazar": "Alexandre Dumas",
+      "Isbn": "978-975-08-0019",
+      "ToplamKopya": 2,
+      "MusaitKopya": 2,
+      "MusaitMi": true
+    },
+    {
+      "Id": "b2222222-2222-2222-2222-222222222203",
+      "Baslik": "Saatleri Ayarlama Enstit\u00FCs\u00FC",
+      "Yazar": "Ahmet Hamdi Tanp\u0131nar",
+      "Isbn": "978-975-08-0003",
+      "ToplamKopya": 1,
+      "MusaitKopya": 1,
+      "MusaitMi": true
+    },
+    {
+      "Id": "37580a4c-3ccb-49e7-9e19-e740037493a2",
+      "Baslik": "Sava\u015F ve Bar\u0131\u015F",
+      "Yazar": "Lev Tolstoy",
+      "Isbn": "978-975-08-0011",
+      "ToplamKopya": 2,
+      "MusaitKopya": 2,
+      "MusaitMi": true
+    },
+    {
+      "Id": "b2222222-2222-2222-2222-222222222207",
+      "Baslik": "Sefiller",
+      "Yazar": "Victor Hugo",
+      "Isbn": "978-975-08-0007",
+      "ToplamKopya": 1,
+      "MusaitKopya": 0,
+      "MusaitMi": false
+    },
+    {
+      "Id": "b2222222-2222-2222-2222-222222222202",
+      "Baslik": "Simyac\u0131",
+      "Yazar": "Paulo Coelho",
+      "Isbn": "978-975-08-0002",
+      "ToplamKopya": 1,
+      "MusaitKopya": 1,
+      "MusaitMi": true
+    },
+    {
+      "Id": "b2222222-2222-2222-2222-222222222201",
+      "Baslik": "Su\u00E7 ve Ceza",
+      "Yazar": "Fyodor Dostoyevski",
+      "Isbn": "978-975-08-0001",
+      "ToplamKopya": 1,
+      "MusaitKopya": 0,
+      "MusaitMi": false
+    },
+    {
+      "Id": "61d4d777-7454-4b09-81db-512fec845b2e",
+      "Baslik": "Ulysses",
+      "Yazar": "James Joyce",
+      "Isbn": "978-975-08-0013",
+      "ToplamKopya": 1,
+      "MusaitKopya": 1,
+      "MusaitMi": true
+    },
+    {
+      "Id": "37ea711d-f0d5-4f92-a414-2a6b3eaa2d8d",
+      "Baslik": "Yabanc\u0131",
+      "Yazar": "Albert Camus",
+      "Isbn": "978-975-08-0016",
+      "ToplamKopya": 2,
+      "MusaitKopya": 2,
+      "MusaitMi": true
+    },
+    {
+      "Id": "b463c7a4-61be-411f-974a-a08ba57543b3",
+      "Baslik": "d\u00FCld\u00FCl",
+      "Yazar": "osman",
+      "Isbn": "978-975-08-0021",
+      "ToplamKopya": 4,
+      "MusaitKopya": 3,
+      "MusaitMi": true
+    },
+    {
+      "Id": "b2222222-2222-2222-2222-222222222208",
+      "Baslik": "\u0130nce Memed",
+      "Yazar": "Ya\u015Far Kemal",
+      "Isbn": "978-975-08-0008",
+      "ToplamKopya": 3,
+      "MusaitKopya": 3,
+      "MusaitMi": true
+    }
+  ],
+  "OduncKayitlari": [
+    {
+      "Id": "c3333333-3333-3333-3333-333333333307",
+      "KullaniciId": "a1111111-1111-1111-1111-111111111102",
+      "AdSoyad": "Mehmet Demir",
+      "KitapId": "b2222222-2222-2222-2222-222222222204",
+      "AlinmaTarihi": "2026-01-20T10:00:00Z",
+      "SonIadeTarihi": "2026-02-03T07:00:00Z",
+      "IadeTarihi": "2026-02-01T17:00:00Z"
+    },
+    {
+      "Id": "c3333333-3333-3333-3333-333333333308",
+      "KullaniciId": "a1111111-1111-1111-1111-111111111103",
+      "AdSoyad": "Zeynep Kaya",
+      "KitapId": "b2222222-2222-2222-2222-222222222206",
+      "AlinmaTarihi": "2026-01-25T14:00:00Z",
+      "SonIadeTarihi": "2026-02-08T11:00:00Z",
+      "IadeTarihi": "2026-02-08T10:00:00Z"
+    },
+    {
+      "Id": "c3333333-3333-3333-3333-333333333301",
+      "KullaniciId": "a1111111-1111-1111-1111-111111111101",
+      "AdSoyad": "Ay\u015Fe Y\u0131lmaz",
+      "KitapId": "b2222222-2222-2222-2222-222222222201",
+      "AlinmaTarihi": "2026-02-05T10:00:00Z",
+      "SonIadeTarihi": "2026-02-19T07:00:00Z",
+      "IadeTarihi": "2026-02-20T15:30:00Z"
+    },
+    {
+      "Id": "c3333333-3333-3333-3333-333333333306",
+      "KullaniciId": "a1111111-1111-1111-1111-111111111105",
+      "AdSoyad": "Fatma \u00D6zt\u00FCrk",
+      "KitapId": "b2222222-2222-2222-2222-222222222208",
+      "AlinmaTarihi": "2026-02-10T16:00:00Z",
+      "SonIadeTarihi": "2026-02-24T13:00:00Z",
+      "IadeTarihi": "2026-02-28T12:00:00Z"
+    },
+    {
+      "Id": "c3333333-3333-3333-3333-333333333302",
+      "KullaniciId": "a1111111-1111-1111-1111-111111111101",
+      "AdSoyad": "Ay\u015Fe Y\u0131lmaz",
+      "KitapId": "b2222222-2222-2222-2222-222222222203",
+      "AlinmaTarihi": "2026-03-01T09:00:00Z",
+      "SonIadeTarihi": "2026-03-15T06:00:00Z",
+      "IadeTarihi": "2026-06-14T00:23:05.2336222Z"
+    },
+    {
+      "Id": "c3333333-3333-3333-3333-333333333303",
+      "KullaniciId": "a1111111-1111-1111-1111-111111111102",
+      "AdSoyad": "Mehmet Demir",
+      "KitapId": "b2222222-2222-2222-2222-222222222202",
+      "AlinmaTarihi": "2026-03-10T11:00:00Z",
+      "SonIadeTarihi": "2026-03-24T08:00:00Z",
+      "IadeTarihi": "2026-06-24T21:32:48.8205381Z"
+    },
+    {
+      "Id": "c3333333-3333-3333-3333-333333333304",
+      "KullaniciId": "a1111111-1111-1111-1111-111111111103",
+      "AdSoyad": "Zeynep Kaya",
+      "KitapId": "b2222222-2222-2222-2222-222222222205",
+      "AlinmaTarihi": "2026-03-15T13:00:00Z",
+      "SonIadeTarihi": "2026-03-29T10:00:00Z",
+      "IadeTarihi": "2026-06-14T00:48:09.9301376Z"
+    },
+    {
+      "Id": "c3333333-3333-3333-3333-333333333305",
+      "KullaniciId": "a1111111-1111-1111-1111-111111111104",
+      "AdSoyad": "Ali \u00C7elik",
+      "KitapId": "b2222222-2222-2222-2222-222222222207",
+      "AlinmaTarihi": "2026-04-01T08:30:00Z",
+      "SonIadeTarihi": "2026-04-15T05:30:00Z",
+      "IadeTarihi": "2026-06-14T00:23:29.6725433Z"
+    },
+    {
+      "Id": "f41b2137-e690-41f9-acfc-d4d9d2f61e16",
+      "KullaniciId": "7a05db2a-81f1-4d1f-af1d-08b4a7ef488b",
+      "AdSoyad": "Emre Duman",
+      "KitapId": "b2222222-2222-2222-2222-222222222204",
+      "AlinmaTarihi": "2026-06-14T00:23:01.3377572Z",
+      "SonIadeTarihi": "2026-06-27T21:23:01Z",
+      "IadeTarihi": "2026-06-24T21:48:33.9096163Z"
+    },
+    {
+      "Id": "9e057cfd-11c6-4442-a3d5-17dee973dbda",
+      "KullaniciId": "7a05db2a-81f1-4d1f-af1d-08b4a7ef488b",
+      "AdSoyad": "Emre Duman",
+      "KitapId": "b2222222-2222-2222-2222-222222222207",
+      "AlinmaTarihi": "2026-06-14T00:23:37.7204534Z",
+      "SonIadeTarihi": "2026-06-27T21:23:37Z",
+      "IadeTarihi": "2026-06-14T00:23:40.5371136Z"
+    },
+    {
+      "Id": "878816f8-7ac8-48ab-8e7f-c8e7bf5efaf3",
+      "KullaniciId": "a1111111-1111-1111-1111-111111111104",
+      "AdSoyad": "Ali \u00C7elik",
+      "KitapId": "b2222222-2222-2222-2222-222222222207",
+      "AlinmaTarihi": "2026-06-14T00:23:49.7609603Z",
+      "SonIadeTarihi": "2026-06-27T21:23:49Z",
+      "IadeTarihi": "2026-06-14T00:23:53.9689362Z"
+    },
+    {
+      "Id": "8b2027eb-ce0b-4150-b634-ca326f843d38",
+      "KullaniciId": "a1111111-1111-1111-1111-111111111101",
+      "AdSoyad": "Ay\u015Fe Y\u0131lmaz",
+      "KitapId": "b2222222-2222-2222-2222-222222222207",
+      "AlinmaTarihi": "2026-06-14T00:24:03.6804986Z",
+      "SonIadeTarihi": "2026-06-27T21:24:03Z",
+      "IadeTarihi": "2026-06-14T00:24:05.6006726Z"
+    },
+    {
+      "Id": "91c22c95-bb73-4790-9103-6f9757f48c20",
+      "KullaniciId": "a1111111-1111-1111-1111-111111111105",
+      "AdSoyad": "Fatma \u00D6zt\u00FCrk",
+      "KitapId": "b2222222-2222-2222-2222-222222222207",
+      "AlinmaTarihi": "2026-06-14T00:24:10.000332Z",
+      "SonIadeTarihi": "2026-06-27T21:24:10Z",
+      "IadeTarihi": "2026-06-14T00:24:13.3847019Z"
+    },
+    {
+      "Id": "e2bd25e8-9cb2-4b82-a93d-5f74c1f910a6",
+      "KullaniciId": "a1111111-1111-1111-1111-111111111105",
+      "AdSoyad": "Fatma \u00D6zt\u00FCrk",
+      "KitapId": "b2222222-2222-2222-2222-222222222207",
+      "AlinmaTarihi": "2026-06-14T00:24:24.6565761Z",
+      "SonIadeTarihi": "2026-06-27T21:24:24Z",
+      "IadeTarihi": null
+    },
+    {
+      "Id": "be733c38-7ade-43df-be27-ff5df7aaed04",
+      "KullaniciId": "a1111111-1111-1111-1111-111111111101",
+      "AdSoyad": "Ay\u015Fe Y\u0131lmaz",
+      "KitapId": "b2222222-2222-2222-2222-222222222201",
+      "AlinmaTarihi": "2026-06-14T00:42:26.9533278Z",
+      "SonIadeTarihi": "2026-06-28T00:42:26.9533278Z",
+      "IadeTarihi": null
+    },
+    {
+      "Id": "787e1737-af78-45a6-a658-ca02b29cff18",
+      "KullaniciId": "4584e181-41fa-4ac2-a124-986094c7b77b",
+      "AdSoyad": "\u00E7a\u011Fr\u0131 ero\u011Flu",
+      "KitapId": "b463c7a4-61be-411f-974a-a08ba57543b3",
+      "AlinmaTarihi": "2026-06-24T21:32:38.3013108Z",
+      "SonIadeTarihi": "2026-07-08T21:32:38.3013108Z",
+      "IadeTarihi": "2026-06-24T21:35:49.5276604Z"
+    },
+    {
+      "Id": "09bcc202-0182-410a-a76d-3b779fed2d2b",
+      "KullaniciId": "4584e181-41fa-4ac2-a124-986094c7b77b",
+      "AdSoyad": "\u00E7a\u011Fr\u0131 ero\u011Flu",
+      "KitapId": "b463c7a4-61be-411f-974a-a08ba57543b3",
+      "AlinmaTarihi": "2026-06-24T21:48:02.9755701Z",
+      "SonIadeTarihi": "2026-07-08T21:48:02.9755701Z",
+      "IadeTarihi": null
+    }
+  ],
+  "Rezervasyonlar": [
+    {
+      "Id": "92320076-4ff4-4237-bd5e-1e0fb0b5afe1",
+      "KullaniciId": "a1111111-1111-1111-1111-111111111101",
+      "AdSoyad": "Ay\u015Fe Y\u0131lmaz",
+      "KitapId": "b2222222-2222-2222-2222-222222222205",
+      "RezervasyonTarihi": "2026-06-14T00:42:41.0041153Z",
+      "Durum": "Haz\u0131r"
+    },
+    {
+      "Id": "1df9ef99-3d59-4d9a-bcab-85a8d90307e8",
+      "KullaniciId": "2c889256-084c-464d-a7c1-2c844f7a5e4b",
+      "AdSoyad": "Or\u00E7un \u015Eanl\u0131",
+      "KitapId": "b2222222-2222-2222-2222-222222222202",
+      "RezervasyonTarihi": "2026-06-14T01:43:01.2141831Z",
+      "Durum": "Haz\u0131r"
+    },
+    {
+      "Id": "5c2e5ee1-da43-4b4b-9929-e7e393582449",
+      "KullaniciId": "4584e181-41fa-4ac2-a124-986094c7b77b",
+      "AdSoyad": "\u00E7a\u011Fr\u0131 ero\u011Flu",
+      "KitapId": "b2222222-2222-2222-2222-222222222204",
+      "RezervasyonTarihi": "2026-06-24T21:33:33.0727121Z",
+      "Durum": "Haz\u0131r"
+    },
+    {
+      "Id": "348b36c8-af2e-4a67-892f-1bb730da9dd1",
+      "KullaniciId": "a1111111-1111-1111-1111-111111111104",
+      "AdSoyad": "Ali \u00C7elik",
+      "KitapId": "b2222222-2222-2222-2222-222222222201",
+      "RezervasyonTarihi": "2026-06-24T21:49:33.7407298Z",
+      "Durum": "Bekliyor"
+    }
+  ],
+  "Ayarlar": {
+    "LoanDurationDays": 14,
+    "FinePerDay": 5
+  }
+}

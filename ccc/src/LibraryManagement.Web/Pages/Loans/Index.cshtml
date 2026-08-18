@@ -1,0 +1,69 @@
+@page
+@model LibraryManagement.Web.Pages.Loans.IndexModel
+@{
+    ViewData["Title"] = "Ödünç İşlemleri";
+}
+
+<h2>Ödünç Ver</h2>
+<form method="post" asp-page-handler="Borrow" class="row g-2 mb-4">
+    <div class="col-md-4">
+        <select asp-for="UserId" asp-items="Model.Users" class="form-select" required>
+            <option value="">Kullanıcı seçin</option>
+        </select>
+    </div>
+    <div class="col-md-4">
+        <select asp-for="BookId" asp-items="Model.AvailableBooks" class="form-select" required>
+            <option value="">Kitap seçin</option>
+        </select>
+    </div>
+    <div class="col-md-2"><button type="submit" class="btn btn-primary">Ödünç Ver</button></div>
+</form>
+
+<h3>Aktif Ödünçler</h3>
+<table class="table table-striped mb-4">
+    <thead><tr><th>Kullanıcı</th><th>Kitap</th><th>Alınma</th><th>Son İade</th><th></th></tr></thead>
+    <tbody>
+    @foreach (var record in Model.ActiveLoans)
+    {
+        <tr>
+            <td>@record.User.FullName</td>
+            <td>@record.Book.Title</td>
+            <td>@record.Loan.BorrowedAt.ToLocalTime().ToString("dd.MM.yyyy")</td>
+            <td class="@(record.Loan.IsOverdue ? "text-danger fw-bold" : "")">@record.Loan.DueDate.ToLocalTime().ToString("dd.MM.yyyy")</td>
+            <td>
+                <form method="post" asp-page-handler="Return" class="d-inline">
+                    <input type="hidden" name="loanId" value="@record.Loan.Id" />
+                    <button type="submit" class="btn btn-sm btn-success">İade Al</button>
+                </form>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+@if (Model.OverdueLoans.Count > 0)
+{
+    <h3 class="text-danger">Geciken İadeler (@Model.OverdueLoans.Count)</h3>
+    <p class="text-muted">Günlük ceza tutarı: <strong>@Model.FinePerDay.ToString("N2") TL</strong></p>
+    <table class="table table-sm table-danger">
+        <thead><tr><th>Kullanıcı</th><th>Kitap</th><th>Son İade</th><th>Gecikme (gün)</th><th>Ceza (TL)</th></tr></thead>
+        <tbody>
+        @foreach (var fine in Model.OverdueFines)
+        {
+            <tr>
+                <td>@fine.LoanRecord.User.FullName</td>
+                <td>@fine.LoanRecord.Book.Title</td>
+                <td>@fine.LoanRecord.Loan.DueDate.ToLocalTime().ToString("dd.MM.yyyy")</td>
+                <td>@fine.DaysOverdue</td>
+                <td class="fw-bold">@fine.FineAmount.ToString("N2")</td>
+            </tr>
+        }
+        </tbody>
+        <tfoot>
+            <tr class="fw-bold">
+                <td colspan="4" class="text-end">Toplam gecikme cezası:</td>
+                <td>@Model.TotalOverdueFineAmount.ToString("N2") TL</td>
+            </tr>
+        </tfoot>
+    </table>
+}

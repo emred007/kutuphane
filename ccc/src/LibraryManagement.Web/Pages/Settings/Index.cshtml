@@ -1,0 +1,23 @@
+@page
+@model LibraryManagement.Web.Pages.Settings.IndexModel
+@{
+    ViewData["Title"] = "Ayarlar";
+}
+
+<h2>Ayarlar</h2>
+
+<p class="text-muted">Veritabanı: @Model.DatabasePath</p>
+
+<form method="post" asp-page-handler="Save" class="row g-2 mb-4">
+    <div class="col-md-3">
+        <label class="form-label">Ödünç süresi (gün)</label>
+        <input asp-for="LoanDurationDays" class="form-control" type="number" min="1" max="365" />
+    </div>
+    <div class="col-md-2 d-flex align-items-end">
+        <button type="submit" class="btn btn-primary">Kaydet</button>
+    </div>
+</form>
+
+<form method="post" asp-page-handler="Backup">
+    <button type="submit" class="btn btn-secondary">Veritabanı Yedeği Al</button>
+</form>

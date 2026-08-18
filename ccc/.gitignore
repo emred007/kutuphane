@@ -1,0 +1,33 @@
+# Build
+**/bin/
+**/obj/
+**/.vs/
+
+# User-specific
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# IDE
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Generated reports (recreated on run)
+src/LibraryManagement.Console/data/kutuphane-raporu.txt
+src/LibraryManagement.Console/data/kutuphane-raporu.xlsx
+src/LibraryManagement.Console/data/kutuphane-raporu.html
+src/LibraryManagement.Console/data/kutuphane-raporu.pdf
+src/LibraryManagement.Console/data/yedekler/
+
+# Local database (SampleDataSeeder creates on first run)
+src/LibraryManagement.Console/data/kutuphane.db
+src/LibraryManagement.Console/data/kutuphane.db-*
